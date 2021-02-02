@@ -29,13 +29,13 @@ WORKDIR ./
 
 RUN npm install
 
-CMD ./node_modules/protractor/bin/webdriver-manager start
+CMD webdriver-manager start
 
 RUN apt-get update
 RUN apt-get -y install default-jre
 
-RUN npm install protractor
-
 RUN ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
 
-CMD ./node_modules/protractor/bin/protractor conf.js
+RUN pwd
+
+CMD npx protractor conf.js
