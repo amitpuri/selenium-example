@@ -27,9 +27,9 @@ ENV DISPLAY=:4444
 COPY . ./
 WORKDIR ./
 
-RUN node ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
+RUN ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
 
-CMD node ./node_modules/protractor/bin/webdriver-manager start
+CMD ./node_modules/protractor/bin/webdriver-manager start
 
 RUN npm install
 
