@@ -36,6 +36,6 @@ CMD ./node_modules/protractor/bin/webdriver-manager start
 RUN apt-get update
 RUN apt-get -y install default-jre
 
-RUN npm install --unsafe-perm -g protractor
+RUN npm install -g protractor
 
 CMD ./node_modules/protractor/bin/protractor conf.js
