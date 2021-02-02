@@ -36,6 +36,4 @@ RUN apt-get -y install default-jre
 
 RUN ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
 
-RUN pwd
-
 CMD npx protractor conf.js
