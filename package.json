@@ -1,0 +1,19 @@
+{
+    "name": "cf-ui-e2e",
+    "version": "0.0.1",
+    "keywords": [
+        "webdriver",
+        "selenium"
+    ],
+    "dependencies": {
+        "protractor": "^7.0.0",
+        "protractor-jasmine2-screenshot-reporter": "^0.3.1",
+        "selenium-webdriver": "^4.0.0-alpha.8"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "./node_modules/protractor/bin/webdriver-manager start",
+        "update": "./node_modules/protractor/bin/webdriver-manager update",
+        "test": "protractor conf.js"
+    }
+}
