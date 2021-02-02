@@ -27,11 +27,11 @@ ENV DISPLAY=:4444
 COPY . ./
 WORKDIR ./
 
+RUN npm install
+
 RUN ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
 
 CMD ./node_modules/protractor/bin/webdriver-manager start
-
-RUN npm install
 
 RUN apt-get update
 RUN apt-get -y install default-jre
