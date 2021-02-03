@@ -24,16 +24,24 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 # Set display port as an environment variable
 ENV DISPLAY=:4444
 
+# Get resources
 COPY . ./
+
+# Create app directory
 WORKDIR ./
 
+# Install App Dependencies
 RUN npm install
 
+# Command to be executed when the image is run
 CMD webdriver-manager start
 
+# Install Java needed for Selenium WebDriver to run
 RUN apt-get update
 RUN apt-get -y install default-jre
 
+# Update WebDriver
 RUN ./node_modules/protractor/bin/webdriver-manager update --versions.standalone 3.0.1
 
+# Run Protractor once the image is run
 CMD npx protractor conf.js
